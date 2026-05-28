@@ -1,0 +1,9 @@
+node_modules
+dist
+output
+test-output
+.git
+.gitignore
+!.env.example
+*.md
+.vscode

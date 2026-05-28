@@ -1,5 +1,5 @@
 {
-  "name": "wb-reviews-analyzer",
+  "name": "wb-reviews-fetcher",
   "version": "1.0.0",
   "scripts": {
     "dev": "tsx src/interfaces/cli/main.ts",
@@ -8,8 +8,7 @@
     "start:server": "nest start",
     "start:server:dev": "nest start --watch",
     "start:server:prod": "node dist/interfaces/http/main.js",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "test:load:different": "npx tsx src/scripts/load-test.ts"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

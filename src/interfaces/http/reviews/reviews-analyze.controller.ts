@@ -20,7 +20,7 @@ export class ReviewsAnalyzeController {
 @Get()
 async analyze(@Query() query: any) {
   const startTime = Date.now();
-  const refresh = query.refresh === true || query.forceCollect === 'true';
+  const refresh = query.refresh === true || query.refresh === 'true';
 
 
     try {
@@ -33,8 +33,6 @@ async analyze(@Query() query: any) {
     // Если данные устарели - принудительно обновляем
     if (needsRefresh) {
       this.logger.log('Data may be stale, forcing refresh');
-      query.useCache = false;
-      query.forceCollect = true;
     }
     const result = await this.reviewsService.fetchReviews(query);
 

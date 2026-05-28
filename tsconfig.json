@@ -5,7 +5,6 @@
     "moduleResolution": "node",
     "lib": ["ES2022"],
     "outDir": "./dist",
-    "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -18,9 +17,9 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "strictPropertyInitialization": false,
-    "types": ["node"],
+    "types": ["node", "jest"],
     "moduleDetection": "force"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "test/**/*", "src/index.ts"],
   "exclude": ["node_modules", "dist"]
 }
